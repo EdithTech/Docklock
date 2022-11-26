@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DockLock</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bcae8f3ab4.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS Link -->
+    <!-- <link type="text/css" href="/public/css/newCss.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/EdithTech/cdn/newCss.min.css" />
+</head>
+
+<body class="view-page">
+    <div class="outerNav">
+        <div class="my-navbar">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top doc-lock-navbar">
+                <img src="/public/images/logo_1.png" alt="" id="nav-img">
+                <div id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../public/2nd.html">Upload</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <h1 id="project-title">
+            <span id="head-title"><i>DocLock</i></span>
+            <span class="text-muted" id="sub-title">The Document Holder</span>
+        </h1>
+    </div>
+
+    <div class="outer">
+        <div class="inner">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Document Name</th>
+                        <th>File Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table-group-divider">
+                    <% if (sampleData.length> 0) {
+                        sampleData.forEach((data) => {
+                        %>
+
+                        <tr>
+                            <td>
+                                <%= data.u_name %>
+                            </td>
+                            <td>
+                                <%= data.d_name %>
+                            </td>
+                            <td>
+                                <%= data.file_name %>
+                            </td>
+                            <td>
+                                <a href="../db/<%= data.file_path %>" onclick="dwnld()" class="btn btn-primary
+                            btn-sm">View</a>
+                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                        <!-- </tbody> -->
+
+                        <% }); } else { %>
+
+                            <!-- <tbody class="table-group-divider"> -->
+                            <tr>
+                                <td colspan="4">No Data Found</td>
+                            </tr>
+
+                            <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/EdithTech/cdn/index.min.js"></script>
+</body>
+
+</html>

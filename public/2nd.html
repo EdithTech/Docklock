@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DockLock</title>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bcae8f3ab4.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- CSS Link -->
+  <!-- <link rel="stylesheet" href="/public/css/newCss.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/EdithTech/cdn/newCss.min.css" />
+</head>
+
+<body>
+  
+  <div class="outer">
+    <div class="inner">
+      
+      <div class="title-div">
+        <h1 id="project-title">
+          <span id="head-title">
+            <i>DocLock</i>
+          </span>
+          <span class="text-muted" id="sub-title">The Document Holder</span>
+        </h1>
+        <div class="img-div">
+          <img src="/public/images/logo.png" alt="" class="logo-img" />
+        </div>
+      </div>
+
+      <div class="">
+        <form action="" method="post" enctype="multipart/form-data">
+          <span class="login-title">Upload Document</span>
+          <div class="wrap-input100">
+            <input type="text" class="form-control input100" name="name" id="your-name" placeholder="Your Name"
+              required>
+            <span class="focus-input"></span>
+            <span class="symbol-input100">
+              <i class="fa-solid fa-user"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100">
+            <input type="text" class="form-control input100" name="d_name" id="document-name"
+              placeholder="Document Name" required>
+            <span class="focus-input"></span>
+            <span class="symbol-input100">
+              <i class="fa-solid fa-file"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 chooseFile">
+            <input type="file" accept="application/pdf" class="form-control" name="file"
+            id="choose-file" class="doc-upload" required>            
+          </div>
+
+          <div class="container-login-btn">
+            <button type="submit" onclick="uploadDocs()" class="login-btn btn-dark">UPLOAD</button>
+            <a href="../views/view-page.ejs" class="login-btn btn-dark" id="view-button">VIEW</a>
+          </div>
+        </form>
+
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/EdithTech/cdn/index.min.js"></script>
+</body>
+
+</html>
